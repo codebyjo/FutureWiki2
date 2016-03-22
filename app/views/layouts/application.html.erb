@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FutureWiki2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>FutureWiki2</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <nav class="navbar navbar-default" role="navigation">
-  			<div class="container-fluid">
-    			<ul class="nav navbar-nav navbar-right">
-      				<% if user_signed_in? %>
-        				<li><a href="#">Edit Profile</a></li>
-      				<% else %>
-       					 <li><a href="#">Sign In</a></li>
-      				<% end %>
-    			</ul>
-  			</div>
-</nav>
-</head>
-<body>
 
-<%= yield %>
+ </nav>
 
-</body>
+<div  class="row">
+  <div class="col-md-6 col-md-offset-3 text-center">
+
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+          <li><a href="#">Edit Profile</a></li>
+          <% else %>
+          <li><a href="#">Sign In</a></li>
+          <% end %>
+        </ul>
+      </div>
+
+     </div>
+
+
+
+
+</div>
+
+
+
+  </head>
+  <body>
+
+    <%= yield %>
+
+  </body>
 </html>
