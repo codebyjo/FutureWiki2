@@ -1,5 +1,8 @@
 class AddTitleToArticles < ActiveRecord::Migration
-  def change
+  def up
     add_column :articles, :title, :string
+  end
+  def down
+    remove_column :articles, :title, :string
   end
 end
