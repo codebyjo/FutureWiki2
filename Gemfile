@@ -7,6 +7,7 @@ gem 'rails', '4.2.5.1'
 
 gem 'devise'
 gem 'rails_12factor'
+gem 'simple_form'
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: [:production]
