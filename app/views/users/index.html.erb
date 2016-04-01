@@ -5,6 +5,9 @@
 <th>Email </th>
 <th> Last Signed-in Date</th>
 <th>  Profile Last Updated</th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 
 <% @users.each do |u| %>
@@ -12,6 +15,10 @@
 <td><%= u.email %></td>
 <td><%= u.last_sign_in_at %></td>
 <td><%= u.updated_at %></td>
+<td><%= link_to "Show", edit_user_registration_path %></td>
+<td><%= link_to "Edit", edit_user_registration_path %></td>
+<td><%= link_to "Delete", "#"  %></td>
+<td><%=  %></td>
 </tr>
 <% end %>
 
