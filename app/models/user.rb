@@ -15,6 +15,20 @@ class User < ActiveRecord::Base
   end
 
 
+  def admin?
+    self.role.name == "Admin"
+  end
+
+  def staff?
+    self.role.name == "Staff"
+  end
+
+
+  def regular?
+    self.role.name == "Regular"
+  end
+
+
 
 
 end
