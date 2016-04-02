@@ -15,3 +15,4 @@ u1 = User.create({name: "Sally", email: "sally@example.com", password: "aaa", pa
 u2 = User.create({name: "Sue", email: "sue@example.com", password: "aaa", password_confirmation: "aaa", role_id: r2.id})
 u3 = User.create({name: "Test Admin", email: "admin@test.com", password: "aaa", password_confirmation: "aaa", role_id: r3.id})
 u4 = User.create({name: "Test2 Admin2", email: "test@test.com", password: "12345678", password_confirmation: "aaa", role_id: r3.id})
+u5 = User.create({name: "Test2 Admin2", email: "test@example.com", password: "12345678", password_confirmation: "aaa", role_id: r3.id})
