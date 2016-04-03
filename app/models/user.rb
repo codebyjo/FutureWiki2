@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
 
   def assign_role
-    self.role  = Role.find_by name: "Regular" if self.role.nil?
+    self.role  = Role.find_by name: "Admin" if self.role.nil?
 
   end
 
