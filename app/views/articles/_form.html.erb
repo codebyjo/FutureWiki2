@@ -1,5 +1,5 @@
 <%= simple_form_for @article do |f| %>
-
+  <%= f.collection_select :category_id, Category.all, :id, :name {promt: "Choose A Category"}%>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.submit %>

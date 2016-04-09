@@ -51,7 +51,7 @@ def index
 private
 
   def article_params
-    params.require(:article).permit(:title, :content)
+    params.require(:article).permit(:title, :content, :category_id)
   end
 
   def find_article
