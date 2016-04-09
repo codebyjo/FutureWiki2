@@ -1,7 +1,10 @@
 class ArticlesController < ApplicationController
 
-  before_action :find_article, only: [:show, :edit, :update, :destroy, :create, :new]
-  before_action :authenticate_user!, except: [:index, :show]
+#  before_action :find_article, only: [:show, :edit, :update, :destroy, :create, :new]
+# before_action :authenticate_user!, except: [:index, :show]
+
+ 	before_filter :authenticate_user!
+        load_and_authorize_resource
 
 
   def new
