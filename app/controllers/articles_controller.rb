@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
 
-  before_action :find_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_article, only: [:show, :edit, :update, :destroy, :create, :new]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   def new
-  		@article = Article.new
+  		@article = current_user.articles.build
 	end
 
 def index
@@ -17,18 +18,15 @@ def index
   end
 
 
-
   def create
-      @post = current_user.posts.build(post_params)
-      if @post.save
-        redirect_to root_path
-      else
-        render :new
+    @article = current_user.articles.build(article_params)
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
     end
   end
 
-  def edit
-  end
 
   def update
     if @article.update(article_params)
